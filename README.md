@@ -1,45 +1,56 @@
-usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
-           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
-           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
-           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
-           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
-           <command> [<args>]
+# ACT PROXY 1.0
 
-These are common Git commands used in various situations:
+* The project aims to carry out communication between ACT WEB and Stamper.
+* Consult aplication Swagger in 
 
-start a working area (see also: git help tutorial)
-   clone     Clone a repository into a new directory
-   init      Create an empty Git repository or reinitialize an existing one
+## Description
 
-work on the current change (see also: git help everyday)
-   add       Add file contents to the index
-   mv        Move or rename a file, a directory, or a symlink
-   restore   Restore working tree files
-   rm        Remove files from the working tree and from the index
+You can make a post request via API, containing byte[] body, request will receive your stamp.
 
-examine the history and state (see also: git help revisions)
-   bisect    Use binary search to find the commit that introduced a bug
-   diff      Show changes between commits, commit and working tree, etc
-   grep      Print lines matching a pattern
-   log       Show commit logs
-   show      Show various types of objects
-   status    Show the working tree status
+## Getting Started
 
-grow, mark and tweak your common history
-   branch    List, create, or delete branches
-   commit    Record changes to the repository
-   merge     Join two or more development histories together
-   rebase    Reapply commits on top of another base tip
-   reset     Reset current HEAD to the specified state
-   switch    Switch branches
-   tag       Create, list, delete or verify a tag object signed with GPG
+### Installing
 
-collaborate (see also: git help workflows)
-   fetch     Download objects and refs from another repository
-   pull      Fetch from and integrate with another repository or a local branch
-   push      Update remote refs along with associated objects
+* You must be installed in your SO, can be Windows or Linux.
+* Install one IDE that you prefer.
+* Spring Boot.
+* JDK 8 or above.
+* Maven CLI.
+* Docker is optional in this version.
+* Tomcat 7 or above
 
-'git help -a' and 'git help -g' list available subcommands and some
-concept guides. See 'git help <command>' or 'git help <concept>'
-to read about a specific subcommand or concept.
-See 'git help git' for an overview of the system.
+### Dependencies
+
+* Must be configure your "aplication.properties" to use correctly port and host that you desire.
+
+### Executing program in IDE
+
+* Open IDE
+* Configure your JDK
+* Make sure maven is installed
+* Right click project and run with spring boot application.
+
+
+### Executing program in Server Side
+
+* Install Tomcat 7 or above
+* Take war of application
+* Deploy
+* Application started in http://localhost:8081/act-proxy
+
+## Authors
+
+Contributors of project
+
+* Luiz de Albuquerque - luiz.albuquerque@inventcloud.com.br
+* Lucas Ferraro -> lucas.ferraro@certisign.com.br
+
+## Version History
+
+* 0.1
+    * Initial Release
+
+## License
+
+CertiSigin
+
