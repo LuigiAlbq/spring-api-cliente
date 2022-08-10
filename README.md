@@ -1,7 +1,7 @@
 # ACT PROXY 1.0
 
-* The project aims to carry out communication between ACT WEB and Stamper.
-* Consult aplication Swagger in 
+* 
+*
 
 ## Description
 
@@ -16,8 +16,6 @@ You can make a post request via API, containing byte[] body, request will receiv
 * Spring Boot.
 * JDK 8 or above.
 * Maven CLI.
-* Docker is optional in this version.
-* Tomcat 7 or above
 
 ### Dependencies
 
@@ -42,8 +40,7 @@ You can make a post request via API, containing byte[] body, request will receiv
 
 Contributors of project
 
-* Luiz de Albuquerque - luiz.albuquerque@inventcloud.com.br
-* Lucas Ferraro -> lucas.ferraro@certisign.com.br
+* Luigi de Albuquerque
 
 ## Version History
 
@@ -52,5 +49,5 @@ Contributors of project
 
 ## License
 
-CertiSigin
+
 

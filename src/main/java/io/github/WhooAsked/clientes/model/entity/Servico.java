@@ -3,6 +3,8 @@ package io.github.WhooAsked.clientes.model.entity;
 import lombok.Data;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 
 @Entity
@@ -17,8 +19,17 @@ public class Servico {
     private String descricao;
 
     @ManyToOne
-    @JoinColumn(name = "id_produto")
-    private Produto produto;
+    @JoinColumn(name = "id_cliente")
+    private Cliente cliente;
+
+    @Column(nullable = false, length = 250)
+    @NotEmpty(message = "{campo.nome.obrigatorio}")
+    private String Nome;
+
+    @Column(nullable = false, length = 9)
+    @NotNull(message = "{campo.cpf.obrigatorio}")
+    private Integer CPF;
+
 
     @Column
     private BigDecimal valor;
