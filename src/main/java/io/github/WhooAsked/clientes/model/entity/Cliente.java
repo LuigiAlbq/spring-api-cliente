@@ -2,6 +2,7 @@ package io.github.WhooAsked.clientes.model.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
+import org.hibernate.validator.constraints.br.CPF;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
@@ -19,10 +20,11 @@ public class Cliente {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(nullable = false, length = 250)
+    @Column(nullable = false, length = 150)
     @NotEmpty(message = "{campo.nome.obrigatorio}")
     private String nome;
 
+    @CPF
     @Column(nullable = false, length = 11)
     @NotNull(message = "{campo.cpf.obrigatorio}")
     private String cpf;

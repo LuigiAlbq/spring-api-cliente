@@ -1,15 +1,21 @@
-package io.github.WhooAsked.clientes.rest.exception;
+package io.github.WhooAsked.clientes.controller;
 
 import io.github.WhooAsked.clientes.model.entity.Cliente;
 import io.github.WhooAsked.clientes.model.repository.ClienteRepository;
+import io.swagger.annotations.Api;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
+@Api
 @RequestMapping("/api/cliente")
 @CrossOrigin("http://localhost:4200")
 public class ClienteController {
@@ -19,9 +25,13 @@ public class ClienteController {
 
     @Autowired
     public ClienteController(ClienteRepository clienteRepository) {
-
         this.clienteRepository = clienteRepository;
     }
+
+   @GetMapping
+    public List<Cliente> obterTodos(){
+        return clienteRepository.findAll();
+   }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
@@ -29,8 +39,10 @@ public class ClienteController {
         return clienteRepository.save(cliente);
     }
 
-
     @GetMapping("{id}")
+    @Operation(description = "acharPorId" , responses = {
+            @ApiResponse(description = "Find client by id", responseCode = "200", content = @Content(mediaType = "application/text"))
+    })
     public Cliente acharPorId(@PathVariable Integer id) {
         return clienteRepository
                 .findById(id)
