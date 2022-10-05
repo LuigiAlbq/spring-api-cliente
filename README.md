@@ -1,11 +1,8 @@
-# ACT PROXY 1.0
-
-* 
-*
+# API CLIENTE 1.0
 
 ## Description
 
-You can make a post request via API, containing byte[] body, request will receive your stamp.
+You can use requests API.
 
 ## Getting Started
 
@@ -28,17 +25,14 @@ You can make a post request via API, containing byte[] body, request will receiv
 * Make sure maven is installed
 * Right click project and run with spring boot application.
 
-
 ### Executing program in Server Side
 
 * Install Tomcat 7 or above
 * Take war of application
 * Deploy
-* Application started in http://localhost:8081/act-proxy
+* Application started in http://localhost:8080
 
 ## Authors
-
-Contributors of project
 
 * Luigi de Albuquerque
 
