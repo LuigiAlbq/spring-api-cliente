@@ -17,7 +17,6 @@ import java.util.List;
 @RestController
 @Api
 @RequestMapping("/api/cliente")
-@CrossOrigin("http://localhost:4200")
 public class ClienteController {
 
     //Repository serve para fazer consultas no banco de dados

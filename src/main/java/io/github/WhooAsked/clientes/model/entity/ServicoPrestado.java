@@ -3,13 +3,12 @@ package io.github.WhooAsked.clientes.model.entity;
 import lombok.Data;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
+import java.time.LocalDate;
 
 @Entity
 @Data
-public class Servico {
+public class ServicoPrestado {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,15 +21,9 @@ public class Servico {
     @JoinColumn(name = "id_cliente")
     private Cliente cliente;
 
-    @Column(nullable = false, length = 250)
-    @NotEmpty(message = "{campo.nome.obrigatorio}")
-    private String Nome;
-
-    @Column(nullable = false, length = 9)
-    @NotNull(message = "{campo.cpf.obrigatorio}")
-    private Integer CPF;
-
-
     @Column
     private BigDecimal valor;
+
+    @Column
+    private LocalDate data;
 }
